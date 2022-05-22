@@ -110,6 +110,16 @@ lib["CreateWindow"] = function(title)
 		local tablisttitle = Instance.new("TextLabel")
 		local tablisttitleaccent = Instance.new("Frame")
 		
+		local tabdisplaylayout = Instance.new("UIListLayout")
+		
+		tablistlayout.Padding = UDim.new(0,10)
+		
+		tabdisplay.ClipsDescendants = true
+		
+		tabdisplaylayout.Parent = tabdisplay
+		tabdisplaylayout.Name = "cool"
+		tabdisplaylayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+		
 		tabbutton.Name = "tabbutton"
 		tabbutton.Parent = sidebarlist
 		tabbutton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -144,12 +154,6 @@ lib["CreateWindow"] = function(title)
 		tab.Position = UDim2.new(0.0247933883, 0, 0.02734375, 0)
 		tab.Size = UDim2.new(0, 343, 0, 240)
 		tab.Visible = false
-		
-		local tabdisplaypagelayout = Instance.new("UIPageLayout")
-		
-		tabdisplaypagelayout.Parent = tabdisplay
-		tabdisplaypagelayout.Name = "cool"
-		tabdisplaypagelayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 		
 		tabbutonmain.Name = "tabbutonmain"
 		tabbutonmain.Parent = tabbutton
