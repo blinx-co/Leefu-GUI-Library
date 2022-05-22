@@ -101,6 +101,9 @@ lib["CreateWindow"] = function(title)
 		local tabbutonmain = Instance.new("TextButton")
 		
 		local tabdisplay = Instance.new("Frame")
+		local tabdisplay = Instance.new("Frame")
+		local tabdisplaylayout = Instance.new("UIListLayout")
+		local tabdisplaypadding = Instance.new("UIPadding")
 		local tab = Instance.new("Frame")
 		local tabcorner = Instance.new("UICorner")
 		local tablist = Instance.new("ScrollingFrame")
@@ -110,15 +113,25 @@ lib["CreateWindow"] = function(title)
 		local tablisttitle = Instance.new("TextLabel")
 		local tablisttitleaccent = Instance.new("Frame")
 		
-		local tabdisplaylayout = Instance.new("UIListLayout")
-		
-		tablistlayout.Padding = UDim.new(0,10)
-		
+		tabdisplay.Name = "tabdisplay"
+		tabdisplay.Parent = main
+		tabdisplay.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+		tabdisplay.BackgroundTransparency = 0
 		tabdisplay.ClipsDescendants = true
-		
+		tabdisplay.Position = UDim2.new(0.242171183, 0, 0.120274916, 0)
+		tabdisplay.Size = UDim2.new(0, 363, 0, 256)
+		tabdisplay.BorderSizePixel = 0
+
+		tabdisplaylayout.Name = "tabdisplaylayout"
 		tabdisplaylayout.Parent = tabdisplay
-		tabdisplaylayout.Name = "cool"
-		tabdisplaylayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+		tabdisplaylayout.FillDirection = Enum.FillDirection.Horizontal
+		tabdisplaylayout.SortOrder = Enum.SortOrder.LayoutOrder
+		tabdisplaylayout.VerticalAlignment = Enum.VerticalAlignment.Center
+		tabdisplaylayout.Padding = UDim.new(0, 20)
+
+		tabdisplaypadding.Name = "tabdisplaypadding"
+		tabdisplaypadding.Parent = tabdisplay
+		tabdisplaypadding.PaddingLeft = UDim.new(0, 10)
 		
 		tabbutton.Name = "tabbutton"
 		tabbutton.Parent = sidebarlist
