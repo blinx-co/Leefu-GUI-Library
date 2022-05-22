@@ -145,6 +145,12 @@ lib["CreateWindow"] = function(title)
 		tab.Size = UDim2.new(0, 343, 0, 240)
 		tab.Visible = false
 		
+		local tabdisplaypagelayout = Instance.new("UIPageLayout")
+		
+		tabdisplaypagelayout.Parent = tabdisplay
+		tabdisplaypagelayout.Name = "cool"
+		tabdisplaypagelayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+		
 		tabbutonmain.Name = "tabbutonmain"
 		tabbutonmain.Parent = tabbutton
 		tabbutonmain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
