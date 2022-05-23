@@ -141,15 +141,24 @@ lib["CreateWindow"] = function(title)
 		tabbutton_main.Text = ""
 		tabbutton_main.TextColor3 = Color3.fromRGB(0, 0, 0)
 		tabbutton_main.TextSize = 14.000
+		
+		tab.Name = TabTitle
+		tab.Parent = tabs
+		tab.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+		tab.Size = UDim2.new(0, 147, 0, 96)
+		tab.Active = true
+		tab.Draggable  = true
+		tab.Visible = false
+		
 		tabbutton_main.MouseButton1Click:Connect(function()
-			local open = true
+			local open = false
 			if tab.Name == TabTitle then
-				if open == true then
-					open = false
-					tab.Visible = false
-				elseif open == false then
+				if open == false then
 					open = true
 					tab.Visible = true
+				elseif open == true then
+					open = false
+					tab.Visible = false
 				end 
 			end
 		end)
@@ -160,13 +169,6 @@ lib["CreateWindow"] = function(title)
 		tabs.BackgroundTransparency = 1.000
 		tabs.Position = UDim2.new(0.230449826, 0, 0.120245397, 0)
 		tabs.Size = UDim2.new(0, 952, 0, 496)
-
-		tab.Name = TabTitle
-		tab.Parent = tabs
-		tab.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-		tab.Size = UDim2.new(0, 147, 0, 96)
-		tab.Active = true
-		tab.Draggable  = true
 
 		tab_layout.Name = "tab_layout"
 		tab_layout.Parent = tab
