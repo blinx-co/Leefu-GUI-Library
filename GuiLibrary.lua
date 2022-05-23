@@ -23,6 +23,8 @@ lib["CreateWindow"] = function(title)
 	main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 	main.Position = UDim2.new(0.121799305, 0, 0.119018406, 0)
 	main.Size = UDim2.new(0, 147, 0, 116)
+	main.Active = true
+	main.Draggable = true
 
 	mainlayout.Name = "mainlayout"
 	mainlayout.Parent = main
@@ -163,6 +165,8 @@ lib["CreateWindow"] = function(title)
 		tab.Parent = tabs
 		tab.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 		tab.Size = UDim2.new(0, 147, 0, 96)
+		tab.Active = true
+		tab.Draggable  = true
 
 		tab_layout.Name = "tab_layout"
 		tab_layout.Parent = tab
